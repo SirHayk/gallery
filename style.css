@@ -107,9 +107,43 @@ header p {
   justify-content: space-between; /* Distribuye uniformemente los elementos */
 }
 .gallery ul li {
+  position: relative;
   margin-bottom: 20px;
   width: 23.2456140351%;
-  position: relative;
+  overflow: hidden;
+}
+.gallery ul li:before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  z-index: 2;
+}
+.gallery ul li h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  text-align: center;
+  font-family: Arial;
+  margin-left: 1px;
+}
+.gallery ul li .title-box {
+  position: absolute;
+  display: flex;
+  top: 1px; /* Ajusta según sea necesario */
+  right: 1px; /* Ajusta según sea necesario */
+  z-index: 3;
+  background-color: #fff;
+  height: 22px;
+  width: auto;
+  padding: 2px;
+  margin: 0;
+  text-align: center;
+}
+.gallery ul li .title-box img {
+  width: 16px;
+  height: 16px;
+  margin-left: 1px; /* Ajusta según sea necesario */
 }
 .gallery ul li a {
   display: block;
@@ -119,6 +153,10 @@ header p {
   margin: 0;
   padding: 0;
   line-height: 0;
+}
+.gallery ul li img {
+  width: 100%; /* Asegura que la imagen ocupe todo el espacio */
+  height: auto;
 }
 .gallery ul li a:before {
   position: absolute;
